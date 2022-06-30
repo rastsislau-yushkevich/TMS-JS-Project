@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.scss">
+    <title>Trello</title>
+</head>
+<body>
+
+    <div id="simpleModal" class="modal">
+        <div class="modal__content">
+            <input type="text" class="title" placeholder="Title" id="title" value="">
+            <input type="text" class="description" placeholder="Description" id="description" value="">
+            <div class="modal__content-footer">
+                <select id="userSelect">
+                </select>
+                <div>
+                    <button id="cancel">Cancel</button>
+                    <button id="confirm">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <span class="header__logo">Trello</span>
+        <span class="header__watch" id="watch"></span>
+    </header>
+    <main class="main">
+        <div class="main__column" >
+            <div class="main__column-header todo-header">
+                <span>TODO</span>
+                <span class="amount"></span>
+            </div>
+            <div class="main__column-content" id="todo-column">
+
+            </div>
+            <button class="main__column-btn todo-btn" id="todo-btn">Add todo</button>
+        </div>
+        <div class="main__column">
+            <div class="main__column-header progress-header">
+                <span>IN PROGRESS</span>
+                <span class="amount"></span>
+            </div>
+            <div class="main__column-content" id="progress-column">
+
+            </div>
+        </div>
+        <div class="main__column">
+            <div class="main__column-header done-header">
+                <span>DONE</span>
+                <span class="amount"></span>
+            </div>
+            <div class="main__column-content" id="done-column">
+
+            </div>
+            <button class="main__column-btn done-btn" id="done-btn">Delete all</button>
+        </div>
+    </main>
+    <script src="./modules/script.js" type="module"></script>
+</body>
+</html>
